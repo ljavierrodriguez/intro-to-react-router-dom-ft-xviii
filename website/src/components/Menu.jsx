@@ -40,6 +40,11 @@ function Menu() {
                                 Contact
                             </Link>
                         </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="https://google.cl" target="_blank" rel="noreferrer">
+                                Google
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
