@@ -1,8 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
  
 
 function Menu() {
+
+    const location = useLocation();
+
+    console.log(location);
+
     return (
         <nav
             className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
@@ -26,17 +31,17 @@ function Menu() {
                 <div className="collapse navbar-collapse" id="navbarResponsive">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/about">
+                            <Link className={"nav-link " + (location.pathname.includes('/about') ? "active": "")} to="/about">
                                 About
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/services">
+                            <Link className={"nav-link " + (location.pathname.includes('/services') ? "active": "")} to="/services">
                                 Services
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/contact">
+                            <Link className={"nav-link " + (location.pathname.includes('/contact') ? "active": "")} to="/contact">
                                 Contact
                             </Link>
                         </li>
